@@ -3,18 +3,18 @@ set backup=0
 REM 以下為使用者變數
 REM 注意！！！請務必填入參數，否則批次檔無法正常運作
 
-set "source="
+set "source=%localappdata%\Remant\Saved\SaveGames"
 REM 備份的來源位置
 REM 有需要的話，請將後面的檔案路徑改為你的Steam安裝位置及存檔位置
-REM (例如: %ProgramFiles(x86)%\Steam\userdata\..\582010)
+REM (預設值: %localappdata%\Remant\Saved\SaveGames)
 
-set "target="
+set "target=%userprofile%\Documents"
 REM 備份的存放位置
-REM (例如: C:\Users\%username%\Documents)
+REM (預設值: %userprofile%\Documents)
 
-set "foldername=MHW存檔備份"
+set "foldername=RFA存檔備份"
 REM 備份主要目錄名稱
-REM (預設值: MHW存檔備份)
+REM (預設值: RFA存檔備份)
 
 REM 使用者變數結束
 
@@ -23,7 +23,7 @@ if "%target%"=="" goto not_defined
 if "%source%"=="" goto not_defined
 if "%foldername%"=="" goto not_defined
 REM 判斷參數是否已設定以決定是否跳躍至not_defined區段，提示程式標題
-echo MHW存檔一鍵備份 by 關@Kuan ver2.0
+echo RFA存檔一鍵備份 by 關@Kuan ver1.0
 echo.
 REM 判斷備份資料夾是否已經存在，存在時將提示使用者自料夾已存在；不存在時將建立資料夾並提示使用者
 echo 偵測備份資料夾是否已存在...
