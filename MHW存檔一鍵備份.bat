@@ -1,4 +1,4 @@
-@ECHO off
+@echo off
 set backup=0
 REM 以下為使用者變數
 REM 注意！！！請務必填入參數，否則批次檔無法正常運作
@@ -12,9 +12,9 @@ set "target="
 REM 備份的存放位置
 REM (例如: C:\Users\%username%\Documents)
 
-set "foldername=MHW存檔備份"
+set "foldername="
 REM 備份主要目錄名稱
-REM (預設值: MHW存檔備份)
+REM (例如: XXX存檔備份)
 
 REM 使用者變數結束
 
@@ -23,7 +23,7 @@ if "%target%"=="" goto not_defined
 if "%source%"=="" goto not_defined
 if "%foldername%"=="" goto not_defined
 REM 判斷參數是否已設定以決定是否跳躍至not_defined區段，提示程式標題
-echo MHW存檔一鍵備份 by 關@Kuan ver2.0
+echo 通用遊戲存檔備份 by 關@Kuan ver1.0
 echo.
 REM 判斷備份資料夾是否已經存在，存在時將提示使用者自料夾已存在；不存在時將建立資料夾並提示使用者
 echo 偵測備份資料夾是否已存在...
